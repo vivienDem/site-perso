@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Cookies from 'universal-cookie';
+import ukLogo from './assets/uk.svg';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const cookies = new Cookies();
+if (cookies.get('lang') === '') {
+  cookies.set('lang', "fr", { path: '/' });
+  cookies.set('langLogo', ukLogo, { path: '/' });
 }
 
-export default App;
+
+export default class App extends React.Component {
+
+  constructor() {
+    super();
+  }
+
+  render() {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={<Home cookies={cookies} />} />
+          <Route path="/contact" element={<Contact cookies={cookies} />} />
+        </Routes>
+      </BrowserRouter>
+    )
+  }
+
+}
+
+
+

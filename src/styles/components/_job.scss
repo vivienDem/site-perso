@@ -1,0 +1,9 @@
+.jobTaskList {
+    li {
+        list-style-type: circle;
+    }
+
+    li:before {
+        content: "";
+    }
+}

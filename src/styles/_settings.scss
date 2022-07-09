@@ -1,0 +1,43 @@
+$blue: #61dafb;
+$blue-2: #282c34;
+$yellow: rgb(248, 159, 0);
+$cyan: rgb(0, 172, 157);
+$grey: rgb(51, 51, 51);
+$black: rgb(38, 38, 38);
+$base: rgb(255, 255, 255);
+$lightGrey: rgb(235, 235, 235);
+
+$BASE_FONT_SIZE: 16px;
+
+$breakpointMega: 1600px;
+$breakpointLarge: 990px;
+$breakpointMed: 767px;
+
+@mixin verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+
+    li {
+        list-style-type: none;
+        position: relative;
+        padding-left: 15px;
+    }
+
+    li:before {
+        content: "\25BA \0020";
+        font-size: 16px;
+        position: absolute;
+        top: 5px;
+        left: -10px;
+    }
+}
+
+
+
+body {
+    @include verticalCenter;
+}
