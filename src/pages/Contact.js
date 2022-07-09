@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import MailButton from '../components/MailButton';
 
+
 var mail = { "fr": "Adresse e-mail : ", "eng": "Email address : " };
 
 export default class Contact extends React.Component {

@@ -20,7 +20,53 @@ import Job from '../components/Job';
 import Navigation from '../components/Navigation';
 
 
+//Functions 
+function getAge(date) {
+    const diff = Date.now() - date.getTime();
+    const age = new Date(diff);
+    return Math.abs(age.getUTCFullYear() - 1970);
+}
 
+// Birth section 
+const birthTitle = { "fr": "Date de naissance", "eng": "Date of birth" };
+const birthContent = { "fr": "30/11/1999 (" + getAge(new Date(1999, 11, 30)) + " ans)", "eng": "30/11/1999 (" + getAge(new Date(1999, 11, 30)) + " years old)" }
+
+//Education section 
+const educationTitle = { "fr": "Formation", "eng": "Education" };
+const education_21_22 = { "fr": "M1 Informatique - Parcours STL", "eng": "MSC - Computer Science" };
+const education_18_21 = { "fr": "Licence - Informatique", "eng": "BSC - Computer Science" };
+const education_17_18 = { "fr": "CPGE - PCSI", "eng": "Preparatory class for the \"grandes écoles\"" };
+
+//Degrees section
+const degreesTitle = { "fr": "Diplômes", "eng": "Degrees" };
+const aLevels = { "fr": { "degree": "Baccalauréat Série S (spécialité physique)", "honours": "Mention TB" }, "eng": { "degree": "A levels", "honours": "With highest honour" } };
+const bsc = { "fr": { "degree": "Licence d'informatique", "honours": "Mention AB" }, "eng": { "degree": "BSC in computer science", "honours": "With honours" } };
+
+//Job section
+const jobTitle = { "fr": "Expérience professionnelle", "eng": "Work Experience" };
+const dgccrf = {
+    "fr": {
+        "date": "Juillet 2019", "job": "Contractuel", "task": "Mission d’archivage au bureau 4A (Valorisation nutritionnelle et information sur les denrées \
+alimentaires)"},
+    "eng": { "date": "July 2019", "job": "Contract worker", "task": "Archiving task at the office 4A (Nutritional valuation and information on foodstuffs)" }
+}
+
+//Skills section
+const skillsTitle = { "fr": "Compétences", "eng": "Skills" };
+const languagesTitle = { "fr": "Langues parlées", "eng": "Languages" }
+const english = {
+    "fr": { "field": "Anglais", "level": "Niveau B2" },
+    "eng": { "field": "English", "level": "Level B2" }
+};
+const french = {
+    "fr": { "field": "Français", "level": "Niveau C2" },
+    "eng": { "field": "French", "level": "Level C2" }
+};
+const programmingTitle = { "fr": "Langages de programmation", "eng": "Programming languages" }
+const programmingLevels = {
+    "fr": { "advanced": "Niveau avancé", "intermediate": "Niveau intermédiaire", "beginner": "Notions" },
+    "eng": { "advanced": "Advanced level", "intermediate": "Intermediate level", "beginner": "Beginner level" }
+}
 
 export default class Home extends React.Component {
 
@@ -35,56 +81,8 @@ export default class Home extends React.Component {
     }
 
     render() {
-        //Functions 
-        function getAge(date) {
-            const diff = Date.now() - date.getTime();
-            const age = new Date(diff);
-            return Math.abs(age.getUTCFullYear() - 1970);
-        }
-
-        // Birth section 
-        const birthTitle = { "fr": "Date de naissance", "eng": "Date of birth" };
-        const birthContent = { "fr": "30/11/1999 (" + getAge(new Date(1999, 11, 30)) + " ans)", "eng": "30/11/1999 (" + getAge(new Date(1999, 11, 30)) + " years old)" }
-
-        //Education section 
-        const educationTitle = { "fr": "Formation", "eng": "Education" };
-        const education_21_22 = { "fr": "M1 Informatique - Parcours STL", "eng": "MSC - Computer Science" };
-        const education_18_21 = { "fr": "Licence - Informatique", "eng": "BSC - Computer Science" };
-        const education_17_18 = { "fr": "CPGE - PCSI", "eng": "Preparatory class for the \"grandes écoles\"" };
-
-        //Degrees section
-        const degreesTitle = { "fr": "Diplômes", "eng": "Degrees" };
-        const aLevels = { "fr": { "degree": "Baccalauréat Série S (spécialité physique)", "honours": "Mention TB" }, "eng": { "degree": "A levels", "honours": "With highest honour" } };
-        const bsc = { "fr": { "degree": "Licence d'informatique", "honours": "Mention AB" }, "eng": { "degree": "BSC in computer science", "honours": "With honours" } };
-
-        //Job section
-        const jobTitle = { "fr": "Expérience professionnelle", "eng": "Work Experience" };
-        const dgccrf = {
-            "fr": {
-                "date": "Juillet 2019", "job": "Contractuel", "task": "Mission d’archivage au bureau 4A (Valorisation nutritionnelle et information sur les denrées \
-        alimentaires)"},
-            "eng": { "date": "July 2019", "job": "Contract worker", "task": "Archiving task at the office 4A (Nutritional valuation and information on foodstuffs)" }
-        }
-
-        //Skills section
-        const skillsTitle = { "fr": "Compétences", "eng": "Skills" };
-        const languagesTitle = { "fr": "Langues parlées", "eng": "Languages" }
-        const english = {
-            "fr": { "field": "Anglais", "level": "Niveau B2" },
-            "eng": { "field": "English", "level": "Level B2" }
-        };
-        const french = {
-            "fr": { "field": "Français", "level": "Niveau C2" },
-            "eng": { "field": "French", "level": "Level C2" }
-        };
-        const programmingTitle = { "fr": "Langages de programmation", "eng": "Programming languages" }
-        const programmingLevels = {
-            "fr": { "advanced": "Niveau avancé", "intermediate": "Niveau intermédiaire", "beginner": "Notions" },
-            "eng": { "advanced": "Advanced level", "intermediate": "Intermediate level", "beginner": "Beginner level" }
-        }
         return (
             <div>
-                <p>bsc[this.state.language]["degree"]</p>
                 <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
                 <Section title={birthTitle[this.state.language]} content={birthContent[this.state.language]} />
                 <Section title={educationTitle[this.state.language]} content={

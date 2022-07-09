@@ -6,25 +6,21 @@ import Cookies from 'universal-cookie';
 import ukLogo from './assets/uk.svg';
 
 
-const cookies = new Cookies();
-if (cookies.get('lang') === '') {
-  cookies.set('lang', "fr", { path: '/' });
-  cookies.set('langLogo', ukLogo, { path: '/' });
-}
-
-
 export default class App extends React.Component {
 
   constructor() {
     super();
+    this.cookies = new Cookies();
+    this.cookies.set('lang', "fr", { path: '/' });
+    this.cookies.set('langLogo', ukLogo, { path: '/' });
   }
 
   render() {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="*" element={<Home cookies={cookies} />} />
-          <Route path="/contact" element={<Contact cookies={cookies} />} />
+          <Route path="*" element={<Home cookies={this.cookies} />} />
+          <Route path="/contact" element={<Contact cookies={this.cookies} />} />
         </Routes>
       </BrowserRouter>
     )
