@@ -14,6 +14,7 @@ import cplusplusLogo from '../assets/c++.svg';
 import bashLogo from '../assets/bash.svg';
 import reactLogo from '../assets/react.svg';
 import jsLogo from '../assets/js.svg';
+import myPicture from '../assets/moi.jpg'
 import Degree from '../components/Degree';
 import Skills from '../components/Skills';
 import Job from '../components/Job';
@@ -84,6 +85,11 @@ export default class Home extends React.Component {
         return (
             <div>
                 <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
+                <div className='title'>
+                    <img src={myPicture} className="myPicture"></img>
+                    <h1 className='name'> Vivien Demeulenaere</h1>
+                </div>
+
                 <Section title={birthTitle[this.state.language]} content={birthContent[this.state.language]} />
                 <Section title={educationTitle[this.state.language]} content={
                     <ul className='list'>

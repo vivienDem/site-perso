@@ -2,11 +2,20 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import LanguageButton from './LanguageButton';
 
+//Links titles
+var projects = { "fr": "Projets", "eng": "Projects" }
+
 export default class Navigation extends React.Component {
 
     constructor(props) {
-        super(props);
-        this.props = props;
+        super();
+        this.cookies = props.cookies;
+        this.state = { language: this.cookies.get('lang'), logo: this.cookies.get('langLogo') };
+    }
+
+    setLanguage = lang => {
+        this.props.updateLang(lang);
+        this.setState({ language: lang });
     }
 
     render() {
@@ -19,7 +28,10 @@ export default class Navigation extends React.Component {
                     <NavLink to="/contact" className={(nav) => (nav.isActive ? "nav-active" : "")} >
                         <li> Contact </li>
                     </NavLink>
-                    <LanguageButton updateLang={this.props.updateLang} cookies={this.props.cookies}></LanguageButton>
+                    <NavLink to="/projects" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+                        <li>{projects[this.state.language]}</li>
+                    </NavLink>
+                    <LanguageButton updateLang={this.setLanguage} cookies={this.props.cookies}></LanguageButton>
                 </ul>
             </div>
         );

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import mailLogo from '../assets/mail.svg'
 
 const MailButton = ({ mailto, label }) => {
     return (
-        <div>
+        <div className='mail'>
             {label}
             <Link
                 to='#'
@@ -12,8 +13,8 @@ const MailButton = ({ mailto, label }) => {
                 }}
             >{mailto}
             </Link>
+            <img src={mailLogo} className='logo'></img>
         </div>
-
     );
 };
 

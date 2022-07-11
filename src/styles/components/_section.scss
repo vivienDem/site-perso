@@ -2,23 +2,22 @@
 
 
     .Collapsible {
-        //float: center;
         width: 100%;
-        //padding-left: 25%;
         background-color: $base;
         justify-content: center;
+        color: gray;
     }
 
     //The content within the collaspable area
     .Collapsible__contentInner {
         padding: 10px;
-        //border: 1px solid $lightGrey;
         border-top: 0;
 
         p {
             margin-bottom: 10px;
             font-size: 14px;
             line-height: 20px;
+            color: gray;
 
             &:last-child {
                 margin-bottom: 0;

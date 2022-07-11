@@ -36,8 +36,23 @@ $breakpointMed: 767px;
     }
 }
 
-
-
 body {
     @include verticalCenter;
+    color: gray;
+}
+
+.title {
+    display: block;
+}
+
+.name {
+    color: gray;
+    display: inline-block;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    margin-left: 2%;
+}
+
+.myPicture {
+    float: left;
 }
