@@ -13,7 +13,14 @@ export const projects = [
         name: { 'fr': 'Street fighter', 'eng': 'Street fighter' },
         languages: ['Haskell'],
         source: "todo",
-        info: { 'fr': 'En construction', 'eng': "In progress" },
+        info: { 
+            'fr': 'Refonte d\'un jeu de combat de type Street Fighter dans un style fonctionnel réalisé dans \
+            le cadre du master STL. Il est à noté que le jeu nécessite SDL 2 qui ne semble fonctionner que sous \
+            certaines versions de linux. Un rapport plus complet est également disponible avec le code source.', 
+            'eng': "Coding of a Street Fighter like game in a functionnal style. This project has been realised \
+            during my first year of MSC. Please note that it uses SDL2 which seems to work only under some \
+            specific versions of linux."  
+        },
         icons: [haskellLogo]
     },
 

@@ -1,4 +1,5 @@
 .navigation {
+    font-size: large;
 
     ul {
         display: flex;
@@ -9,14 +10,14 @@
             padding: 10px;
 
             li {
-                color: $blue;
+                color: $color-3;
                 transition: 0.2s;
                 cursor: pointer;
                 list-style-type: none;
                 float: center;
 
                 &:hover {
-                    color: $blue-2;
+                    color: $color-4;
                 }
             }
 
@@ -29,7 +30,7 @@
                 content: "";
                 height: 4px;
                 width: 0;
-                background: $blue;
+                background: $color-3;
                 position: absolute;
                 border-radius: 10px;
                 bottom: 0px;

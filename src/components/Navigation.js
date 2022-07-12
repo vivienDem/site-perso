@@ -25,12 +25,12 @@ export default class Navigation extends React.Component {
                     <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
                         <li> Curriculum vitae </li>
                     </NavLink>
-                    <NavLink to="/contact" className={(nav) => (nav.isActive ? "nav-active" : "")} >
-                        <li> Contact </li>
-                    </NavLink>
                     <NavLink to="/projects" className={(nav) => (nav.isActive ? "nav-active" : "")}>
                         <li>{projects[this.state.language]}</li>
                     </NavLink>
+                    <NavLink to="/contact" className={(nav) => (nav.isActive ? "nav-active" : "")} >
+                        <li> Contact </li>
+                    </NavLink>    
                     <LanguageButton updateLang={this.setLanguage} cookies={this.props.cookies}></LanguageButton>
                 </ul>
             </div>

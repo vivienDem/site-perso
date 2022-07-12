@@ -1,8 +1,16 @@
 .mail {
+    @include verticalCenter;
     .logo {
-        width: 3%;
-        height: 3%;
-        padding-top: 2%;
         margin-left: 2%;
+        color: $color-5;
+        display: inline-block;
+    }
+
+    .link {
+        padding-left: 2%;
+        color: $color-3;
+        &:hover {
+            color: $color-4;
+        }
     }
 }

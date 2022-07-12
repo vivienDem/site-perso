@@ -17,11 +17,12 @@ $font-1: 'Nova Round', cursive;
 $font-2: 'Dosis', sans-serif;
 $font-3: 'Josefin Sans', serif;
 
-$color-1: #2a1d52;
-$color-2: #6C77F4;
-$color-3: rgb(99, 164, 233);
-$color-4: #4FEDD2;
-$color-5: #36D0EA;
+
+$color-1: #44318d;
+$color-2: #2a1b3d;
+$color-3: #d83f87;
+$color-4: #e98074;
+$color-5: #a4b3b6;
 $white: #ddd;
 $black: #333;
 
@@ -46,6 +47,7 @@ $breakpointMed: 767px;
     }
 
     li:before {
+        color: $color-2;
         content: "\25BA \0020";
         font-size: 16px;
         position: absolute;
@@ -58,7 +60,6 @@ body {
     @include verticalCenter;
     color: $color-5;
     background-color: $color-1;
-    //background: linear-gradient(110deg, $color-1 50%, transparent 200%);
 }
 
 .title {
@@ -66,7 +67,7 @@ body {
 }
 
 .name {
-    color: $color-3;
+    color: $color-5;
     display: inline-block;
     margin-top: 6%;
     margin-bottom: 6%;

@@ -6,14 +6,17 @@ const MailButton = ({ mailto, label }) => {
     return (
         <div className='mail'>
             {label}
-            <Link
+            <Link className='link'
                 to='#'
                 onClick={(e) => {
                     window.open('mailto:' + mailto)
                 }}
             >{mailto}
             </Link>
-            <img src={mailLogo} className='logo'></img>
+            <div className='logo'>
+            <i className="fa fa-envelope" aria-hidden="true"></i>
+            </div>
+            
         </div>
     );
 };

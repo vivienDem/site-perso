@@ -4,7 +4,7 @@
     .Collapsible {
         width: 100%;
         justify-content: center;
-        color: gray;
+        padding-bottom: 1%;
     }
 
     //The content within the collaspable area
@@ -16,7 +16,6 @@
             margin-bottom: 10px;
             font-size: 14px;
             line-height: 20px;
-            color: gray;
 
             &:last-child {
                 margin-bottom: 0;
@@ -36,9 +35,9 @@
         font-family: $font-2;
         color: $color-5;
 
-
+        cursor: pointer;
         &:after {
-            cursor: pointer;
+            color: $color-3;
             font-family: "Font Awesome 5 Free";
             content: '\f0fe';
             position: absolute;
