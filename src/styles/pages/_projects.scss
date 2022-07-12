@@ -1,0 +1,223 @@
+.projectsPage {
+
+    width: 100%;
+    display: grid;
+    min-height: $minHeight;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+        "1"
+        "2";
+
+
+    .radioBanner {
+        grid-area: 1;
+        border-radius: $borderRadius;
+        display: flex;
+        width: 100%;
+        padding: 1rem 2rem;
+        margin: 0 auto;
+        background: $color-1;
+        user-select: none;
+        box-shadow: $shadow;
+
+        li {
+            color: $color-3;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            padding: 0 1rem;
+            flex: 1;
+            z-index: 2;
+            @include verticalCenter;
+
+            input[type="radio"] {
+                visibility: hidden;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    visibility: visible;
+                    position: absolute;
+                    top: -4px;
+                    left: -12px;
+                    height: .9rem;
+                    width: .9rem;
+                    border-radius: 50%;
+                    border: 2px solid $color-4;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                &:after {
+                    content: '';
+                    visibility: visible;
+                    position: absolute;
+                    top: -4px;
+                    left: -12px;
+                    height: .9rem;
+                    width: .9rem;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    background: $color-4;
+                    transform: scale(0);
+                    transform-origin: center;
+                }
+            }
+
+            input:checked:after {
+                transform: scale(1.17) translate(-25%, -25%);
+                top: 2px;
+                left: -6px;
+            }
+
+            input:checked+label {
+                color: $color-4;
+            }
+
+            label {
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    .projects {
+        grid-area: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        i {
+            font-size: 1.4rem;
+            padding: 0 .35rem;
+            color: $color-5;
+            text-shadow: 0 0px 1px $color-1;
+        }
+
+        .project {
+            background: $color-2;
+            border-radius: $borderRadius;
+            margin: 0.5rem 0 0 0;
+            text-align: center;
+            width: 32%;
+            max-height: 50%;
+            padding: .3rem;
+            box-shadow: $shadow;
+            display: grid;
+            grid-template-rows: 20% 45% 20%;
+            grid-template-areas:
+                "1"
+                "2"
+                "3";
+        }
+
+        h3 {
+            grid-area: 2;
+            font-family: $font-2;
+            color: $color-5;
+            font-size: 1.65rem;
+            @include verticalCenter;
+
+        }
+
+        img {
+            grid-area: 1;
+            width: 20%;
+            height: 50%;
+            @include verticalCenter;
+            display: inline-block;
+        }
+
+        .info {
+            grid-area: 3;
+            color: $color-4;
+            cursor: pointer;
+            font-size: 1.5rem;
+            @include verticalCenter;
+            transition: .2s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .showInfo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.507);
+            animation: popup .3s ease forwards;
+            transform-origin: center;
+
+            .infoContent {
+                position: relative;
+                top: 25%;
+                width: 50%;
+                margin: 0 auto;
+                color: $color-5;
+                background: $color-1;
+                border-radius: $borderRadius;
+                padding: 2rem;
+                box-shadow: 0 10px 10px #333;
+                animation: popup .6s ease forwards;
+                transform: scale(0);
+                transform-origin: center;
+
+                @keyframes popup {
+                    to {
+                        transform: scale(1);
+                    }
+                }
+            }
+
+            .head {
+                display: flex;
+                justify-content: space-around;
+                margin: 1rem 0;
+            }
+
+            h3 {
+                text-align: left;
+                //margin-bottom: 1rem;
+            }
+
+            .infoButton {
+                cursor: pointer;
+                color: $color-1;
+                background: $color-5;
+                border-radius: $borderRadius;
+
+                transition: .2s;
+
+                &:hover {
+                    background: $color-4;
+                }
+            }
+
+            .sourceButton {
+                @extend .infoButton;
+                margin-top: 1rem;
+                padding: 1rem;
+                float: right;
+                width: 100%;
+                height: 30%;
+            }
+
+            .exitButton {
+                @extend .infoButton;
+                width: 30%;
+                height: 100%;
+            }
+
+            .text {
+                text-align: justify;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+
+}

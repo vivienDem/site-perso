@@ -1,24 +1,28 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+import ProjectList from '../components/Projects/ProjectsList';
 
 export default class Project extends React.Component {
 
     constructor(props) {
         super();
         this.cookies = props.cookies;
-        this.state = { language: this.cookies.get('lang'), logo: this.cookies.get('langLogo') };
+        this.state = { language: this.cookies.get('lang') };
     }
 
     setLanguage = lang => {
-        this.props.updateLang(lang);
         this.setState({ language: lang });
+    }
+
+    getLanguage = () => {
+        return this.state.language;
     }
 
     render() {
         return (
-            <div>
+            <div className='projectsPage'>
                 <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
-                En construction
+                <ProjectList cookies={this.cookies} getLanguage={this.getLanguage} />
             </div>
         )
     }
