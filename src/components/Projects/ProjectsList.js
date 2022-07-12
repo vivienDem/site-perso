@@ -19,7 +19,7 @@ class ProjectList extends Component {
                 { id: 5, value: "Java" },
                 { id: 6, value: "C++" },
                 { id: 7, value: "OCaml" },
-                { id: 8, value: "MIPS" },
+                { id: 8, value: "MIPS" }
             ],
             selectedRadio: "all"
         }
@@ -37,7 +37,7 @@ class ProjectList extends Component {
         let { projects, radios, selectedRadio } = this.state;
         return (
             <div className="projectsListContent">
-                <ul className='radioBanner'>
+                {<ul className='radioBanner'>
                     {
                         radios.map(radio => {
                             return (
@@ -57,7 +57,7 @@ class ProjectList extends Component {
                             )
                         })
                     }
-                </ul>
+                </ul>}
                 <div className='projects'>
                     {
                         projects

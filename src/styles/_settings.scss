@@ -56,7 +56,9 @@ $breakpointMed: 767px;
 
 body {
     @include verticalCenter;
-    color: gray;
+    color: $color-5;
+    background-color: $color-1;
+    //background: linear-gradient(110deg, $color-1 50%, transparent 200%);
 }
 
 .title {
@@ -64,7 +66,7 @@ body {
 }
 
 .name {
-    color: gray;
+    color: $color-3;
     display: inline-block;
     margin-top: 6%;
     margin-bottom: 6%;

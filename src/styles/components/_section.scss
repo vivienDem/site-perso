@@ -3,7 +3,6 @@
 
     .Collapsible {
         width: 100%;
-        background-color: $base;
         justify-content: center;
         color: gray;
     }
@@ -32,16 +31,16 @@
         font-weight: 400;
         text-decoration: none;
         position: relative;
-        border: 1px solid white;
         padding: 10px;
-        background: $blue;
-        color: white;
+        background: $color-2;
+        font-family: $font-2;
+        color: $color-5;
 
 
         &:after {
             cursor: pointer;
-            font-family: 'FontAwesome';
-            content: '▾';
+            font-family: "Font Awesome 5 Free";
+            content: '\f0fe';
             position: absolute;
             right: 10px;
             top: 10px;
@@ -51,6 +50,7 @@
 
         &.is-open {
             &:after {
+                content: '\f146';
                 transform: rotateZ(180deg);
             }
         }
