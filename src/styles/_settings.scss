@@ -11,12 +11,11 @@ $borderRadius: 25px;
 $shadow: 0 1px 3px #333;
 $minHeight: 50vh;
 
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Josefin+Sans:wght@100&family=Nova+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Josefin+Sans:wght@100&family=Nova+Round&display=swap");
 
-$font-1: 'Nova Round', cursive;
-$font-2: 'Dosis', sans-serif;
-$font-3: 'Josefin Sans', serif;
-
+$font-1: "Nova Round", cursive;
+$font-2: "Dosis", sans-serif;
+$font-3: "Josefin Sans", serif;
 
 $color-1: #44318d;
 $color-2: #2a1b3d;
@@ -33,47 +32,54 @@ $breakpointLarge: 990px;
 $breakpointMed: 767px;
 
 @mixin verticalCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .list {
+  li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 15px;
+  }
 
-    li {
-        list-style-type: none;
-        position: relative;
-        padding-left: 15px;
-    }
-
-    li:before {
-        color: $color-2;
-        content: "\25BA \0020";
-        font-size: 16px;
-        position: absolute;
-        top: 5px;
-        left: -10px;
-    }
+  li:before {
+    color: $color-2;
+    content: "\25BA \0020";
+    font-size: 16px;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+  }
 }
 
 body {
-    @include verticalCenter;
-    color: $color-5;
-    background-color: $color-1;
+  @include verticalCenter;
+  color: $color-5;
+  background-color: $color-1;
+}
+
+.root {
+  height: 100%;
+  width: 100%;
 }
 
 .title {
-    display: block;
+  display: block;
 }
 
 .name {
-    color: $color-5;
-    display: inline-block;
-    margin-top: 6%;
-    margin-bottom: 6%;
-    margin-left: 2%;
+  color: $color-5;
+  display: inline-block;
+  margin-left: 2%;
+  position: relative;
+  top: -60px;
 }
 
 .myPicture {
-    float: left;
+  padding-left: 15%;
+  width: 137px;
+  height: 146px;
+  //float: left;
 }

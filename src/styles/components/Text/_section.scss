@@ -1,0 +1,78 @@
+.section {
+  @include verticalCenter;
+  .Collapsible {
+    width: 70%;
+    padding-bottom: 1%;
+  }
+
+  //The content within the collaspable area
+  .Collapsible__contentInner {
+    padding: 10px;
+    border-top: 0;
+
+    p {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  //The link which when clicked opens the collapsable area
+  .Collapsible__trigger {
+    display: block;
+    border-radius: 100px;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+    padding: 10px;
+    background: $color-2;
+    font-family: $font-2;
+    color: $color-5;
+
+    cursor: pointer;
+    &:after {
+      color: $color-3;
+      font-family: "Font Awesome 5 Free";
+      content: "\f0fe";
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      display: block;
+      transition: transform 300ms;
+    }
+
+    &.is-open {
+      &:after {
+        content: "\f146";
+        transform: rotateZ(180deg);
+      }
+    }
+
+    &.is-disabled {
+      opacity: 0.5;
+      background-color: grey;
+    }
+  }
+
+  .CustomTriggerCSS {
+    background-color: lightcoral;
+    transition: background-color 200ms ease;
+  }
+
+  .CustomTriggerCSS--open {
+    background-color: darkslateblue;
+  }
+
+  .Collapsible__custom-sibling {
+    padding: 5px;
+    font-size: 12px;
+    background-color: #cbb700;
+    color: black;
+  }
+
+  //@include verticalCenter;
+}

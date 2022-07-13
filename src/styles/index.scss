@@ -1,11 +1,10 @@
 @import "./settings";
-@import "./components/section";
-@import "./components/subsection";
-@import "./components/education";
-@import "./components/skills";
-@import "./components/job";
+@import "./components/Text/section";
+@import "./components/Text/subsection";
+@import "./components/CV/skills";
+@import "./components/CV/job";
 @import "./components/navigation";
-@import "./components/languageButton";
-@import "./components/mailButton";
+@import "./components/Buttons/languageButton";
+@import "./components/Buttons/mailButton";
 @import "./pages/projects";
 @import "./pages/contact";
