@@ -1,0 +1,21 @@
+.homePage {
+  .title {
+    @include verticalCenter;
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+  }
+
+  .myPicture {
+    width: 137px;
+    height: 146px;
+    display: inline-block;
+  }
+
+  .name {
+    @include verticalCenter;
+    color: $color-5;
+    display: inline-flex;
+    position: relative;
+    padding-left: 2vh;
+  }
+}

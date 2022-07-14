@@ -18,7 +18,7 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="contactPage">
         <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
         <MailButton
           mailto="viviendemeulenaere@outlook.fr"

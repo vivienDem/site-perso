@@ -37,7 +37,7 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="homePage">
         <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
         <div className="title">
           <img src={myPicture} className="myPicture"></img>

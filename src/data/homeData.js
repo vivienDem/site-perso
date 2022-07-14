@@ -117,7 +117,7 @@ export const trips = {
         Golfe ...",
   },
   eng: {
-    name: "Trips abroad",
+    name: "Trips abroad :",
     content:
       " United Kingdom, Ireland, United States of America, Italy, Germany, \
       gulf countries ...",

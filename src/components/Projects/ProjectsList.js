@@ -62,17 +62,17 @@ class ProjectList extends Component {
         }
         <div className="projects">
           {projects
+            .filter(
+              (project) =>
+                project.languages.includes(selectedRadio) ||
+                selectedRadio === "All"
+            )
             .sort((project1, project2) => {
               return (
                 project1.name[this.props.getLanguage()] >
                 project2.name[this.props.getLanguage()]
               );
             })
-            .filter(
-              (project) =>
-                project.languages.includes(selectedRadio) ||
-                selectedRadio === "All"
-            )
             .map((project) => {
               return (
                 <Project

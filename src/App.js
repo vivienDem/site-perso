@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Cookies from "universal-cookie";
-import ukLogo from "./assets/uk.svg";
 import Project from "./pages/Projects";
 
 export default class App extends React.Component {

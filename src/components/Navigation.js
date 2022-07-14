@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import LanguageButton from "./Buttons/LanguageButton";
 
 //Links titles
-var projects = { fr: "Projets", eng: "Projects" };
+const projects = { fr: "Projets", eng: "Projects" };
 
 export default class Navigation extends React.Component {
   constructor(props) {
