@@ -4,4 +4,14 @@
   top: 0;
   left: 0;
   position: fixed;
+  padding: 0;
+
+  .contactMe {
+    @include verticalCenter;
+    font-size: 3.5rem;
+  }
+
+  li {
+    list-style-type: none;
+  }
 }

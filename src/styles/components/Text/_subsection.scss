@@ -1,7 +1,11 @@
 .subsection {
+    @include verticalCenter;
+
     .Collapsible {
         padding-left: 0%;
     }
 
-    @include verticalCenter;
+    .Collapsible__contentInner {
+        padding-left: 0%;
+    }
 }

@@ -22,6 +22,7 @@ export const projects = [
             specific versions of linux.",
     },
     icons: [haskellLogo],
+    authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
   },
 
   {
@@ -38,6 +39,7 @@ export const projects = [
       eng: "The website that you are currently visiting. You can find my CV and some of my projects.",
     },
     icons: [jsLogo, reactLogo],
+    authors: ["Vivien Demeulenaere"]
   },
 
   {
@@ -45,8 +47,17 @@ export const projects = [
     name: { fr: "Gestionnaire de voeux", eng: "Wishes manager" },
     languages: ["Python"],
     source: "todo",
-    info: { fr: "En construction", eng: "In progress" },
+    info: {
+      fr: "Ce projet a été réalisé dans le cadre du master STL. Il s'agit \
+      d\'un gestionnaire de voeux permettant d'affecter des unités d'enseignement aux étudiants du master en respectant diverses contraintes \
+      notamment celles liées aux emploi du temps. Nous avons utilisé le solveur de contraintes Gurobi pour mener ce projet.\
+      Plus de détails sont disponibles dans le rapport accompagnant le code source",
+      eng: "This project has been realized during my first year of MSC. It is a whishes manger conceived \
+      to assign modules to the students by taking into account their whishes and temporal constraints. Gurobi was used to solve \
+      our mathematic model. A more complete description is availaible (in French) whith the source code."
+    },
     icons: [pythonLogo],
+    authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
   },
 
   {
@@ -57,8 +68,16 @@ export const projects = [
     },
     languages: ["Java"],
     source: "todo",
-    info: { fr: "En construction", eng: "In progress" },
+    info: {
+      fr: "Le but de ce projet réalisé en première année du Master STL était de coder un \
+      compilateur prenant en entrée un programme source écrit dans un langage séquentiel assez simple. L'idée \
+      était ensuite de transformer ce programme en instructions interprétables par une mini-ZAM fournie pour l'occasion",
+      eng: "This first year MSC project aimed at coding a compiler taking as input \
+      a source programm written in a basic sequential language. Then our compiler has to transform the input into instructions \
+      interpretable by a mini-ZAM provided for the occasion."
+    },
     icons: [javaLogo],
+    authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
   },
 
   {
@@ -69,8 +88,16 @@ export const projects = [
     },
     languages: ["OCaml"],
     source: "todo",
-    info: { fr: "En construction", eng: "In progress" },
+    info: {
+      fr: "Le but du problème consiste à manipuler deux modèles de structure de données : l’une sous forme \
+      linéaire et l’autre arborescente. Des expériementations sur ces structures ont ensuite été menées par \
+      Adan Bougherara et moi même. Nos conclusions sont disponibles dans le rapport accompagnant le code source.",
+      eng: "The goal of the project is to manipulate two models of data structure : one in linear form and the other in tree form. \
+      Experiments on these structures were then conducted by Adan Bougherara and myself. \
+      Our conclusions are available in the report (in French) accompanying the source code."
+    },
     icons: [ocamlLogo],
+    authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
   },
 
   {
@@ -78,8 +105,16 @@ export const projects = [
     name: { fr: "Représentation de ROBDD", eng: "Representations of ROBDD" },
     languages: ["Python"],
     source: "todo",
-    info: { fr: "En construction", eng: "In progress" },
+    info: {
+      fr: "Lors de notre premier semestre de Master, il nous a été demandé de représenter des diagrammes de décision binaire \
+      (ou BDD pour Binary Decision Diagram en anglais) ainsi que leur version compressée (ROBDD). Vous trouverez ainsi des \
+      algorithmes de compression et de fusion. Plus de détails sont fournis dans le rapport se trouvant avec le code source.",
+      eng: "During our first semester of MSC, we were asked to represent binary decision diagrams (BDD) and their reduced \
+      version (ROBDD). You will thus find compression and merging algorithms. \
+      More details are provided in the report (in French) next to the source code."
+    },
     icons: [pythonLogo],
+    authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
   },
 
   {
@@ -87,8 +122,16 @@ export const projects = [
     name: { fr: "Optimisation de code MIPS", eng: "MIPS code optimization" },
     languages: ["C++", "MIPS"],
     source: "todo",
-    info: { fr: "En construction", eng: "In progress" },
+    info: {
+      fr: "Durant ma première année de Master, nous avons du réaliser un programme permettant d'optimiser \
+      du code MIPS à partir de bouts de code déjà existants. Il nous a donc fallu implanter divers algorithmes \
+      permettant entre autres de définir des blocs de base ou encore de renommer des variables selon leur vivacité.",
+      eng: "During my first year of Master, we had to complete some code to realize a program in order to optimize \
+      MIPS code. We thus had to implement various algorithms allowing, among other things, to define basic blocks \
+      or to rename variables according to their liveliness."
+    },
     icons: [cplusplusLogo, mipsLogo],
+    authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
   },
 
   {
@@ -99,8 +142,17 @@ export const projects = [
     },
     languages: ["Java"],
     source: "todo",
-    info: { fr: "En construction", eng: "In progress" },
+    info: {
+      fr: "L’objectif de ce projet était d’implanter un prototype simplifié de système de gestion d’événements complexe \
+      pour une ville intelligente. Il a été réalisé avec l'outil BCM4Java, ayant une approche orientée composants et \
+      permettant entre autres une gestion du parallélisme et la mise en place d'un système réparti en masquant au \
+      développeur les appels RMI de Java.",
+      eng: "The goal of this project was to implement a simplified prototype of a complex event management system \
+      for a smart city. It was realized with BCM4Java, a component approach tool allowing, among other things, a management of parallelism \
+      and the implementation of a distributed system by hiding the RMI calls of Java."
+    },
     icons: [javaLogo],
+    authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
   },
 
   {
@@ -108,8 +160,15 @@ export const projects = [
     name: { fr: "Casse-Briques", eng: "Brick Breaker" },
     languages: ["Java"],
     source: "todo",
-    info: { fr: "En construction", eng: "In progress" },
+    info: {
+      fr: <p>Projet de refonte du fameux jeu-vidéo <em>Casse-briques</em> réalisé dans le cadre
+        de ma première année de Master à l'aide de la bibliothèque <em>JavaFX</em>. Un rapport est
+        disponible avec le code source du projet</p>,
+      eng: <p>Coding of a <em>Brick-Breaker</em> during my MSC first year.
+        The graphic renderer uses <em>JavaFX</em>. See the report (in French) for more details.</p>
+    },
     icons: [javaLogo],
+    authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
   },
   {
     id: 10,
@@ -119,8 +178,12 @@ export const projects = [
     },
     languages: ["Java"],
     source: "todo",
-    info: { fr: "En construction", eng: "In progress" },
+    info: {
+      fr: "En construction",
+      eng: "In progress"
+    },
     icons: [javaLogo],
+    authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
   },
   {
     id: 11,
@@ -132,6 +195,7 @@ export const projects = [
     source: "todo",
     info: { fr: "En construction", eng: "In progress" },
     icons: [javaLogo],
+    authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
   },
 ];
 
@@ -149,3 +213,14 @@ export const allRadio = {
   fr: "Tous les langages",
   eng: "All languages",
 };
+
+export const authorsText = {
+  fr: {
+    singular: "Auteur",
+    plural: "Auteurs"
+  },
+  eng: {
+    singular: "Author",
+    plural: "Authors"
+  }
+}

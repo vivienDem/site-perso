@@ -37,7 +37,7 @@ class ProjectList extends Component {
           <ul className="radioBanner">
             {radios
               .sort((radio1, radio2) => {
-                return radio1.value > radio2.value;
+                return radio1.value.localeCompare(radio2.value);
               })
               .map((radio) => {
                 return (
@@ -69,8 +69,8 @@ class ProjectList extends Component {
             )
             .sort((project1, project2) => {
               return (
-                project1.name[this.props.getLanguage()] >
-                project2.name[this.props.getLanguage()]
+                project1.name[this.props.getLanguage()]
+                  .localeCompare(project2.name[this.props.getLanguage()])
               );
             })
             .map((project) => {

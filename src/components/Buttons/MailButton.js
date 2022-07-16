@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import mailLogo from "../../assets/mail.svg";
 
 const MailButton = ({ mailto, label }) => {
   return (

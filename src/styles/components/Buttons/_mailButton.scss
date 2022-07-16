@@ -1,14 +1,16 @@
 .mail {
     @include verticalCenter;
+    color: $color-6;
+
     .logo {
-        margin-left: 2%;
-        color: $color-5;
+        padding-left: 0.5%;
         display: inline-block;
     }
 
     .link {
-        padding-left: 2%;
+        padding-left: 0.5%;
         color: $color-3;
+
         &:hover {
             color: $color-4;
         }
