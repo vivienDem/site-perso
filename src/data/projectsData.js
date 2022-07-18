@@ -67,7 +67,7 @@ export const projects = [
       eng: "Basic Sequential language compiler to mini-ZAM",
     },
     languages: ["Java"],
-    source: "todo",
+    source: "https://github.com/vivienDem/compilateur-vers-Mini-ZAM",
     info: {
       fr: "Le but de ce projet réalisé en première année du Master STL était de coder un \
       compilateur prenant en entrée un programme source écrit dans un langage séquentiel assez simple. L'idée \
@@ -87,7 +87,7 @@ export const projects = [
       eng: "Representations of Polynomials",
     },
     languages: ["OCaml"],
-    source: "todo",
+    source: "https://github.com/vivienDem/Representation-de-polynomes",
     info: {
       fr: "Le but du problème consiste à manipuler deux modèles de structure de données : l’une sous forme \
       linéaire et l’autre arborescente. Des expériementations sur ces structures ont ensuite été menées par \
@@ -104,7 +104,7 @@ export const projects = [
     id: 6,
     name: { fr: "Représentation de ROBDD", eng: "Representations of ROBDD" },
     languages: ["Python"],
-    source: "todo",
+    source: "https://github.com/vivienDem/ROBDD",
     info: {
       fr: "Lors de notre premier semestre de Master, il nous a été demandé de représenter des diagrammes de décision binaire \
       (ou BDD pour Binary Decision Diagram en anglais) ainsi que leur version compressée (ROBDD). Vous trouverez ainsi des \
@@ -121,7 +121,7 @@ export const projects = [
     id: 7,
     name: { fr: "Optimisation de code MIPS", eng: "MIPS code optimization" },
     languages: ["C++", "MIPS"],
-    source: "todo",
+    source: "https://github.com/vivienDem/optimisation-de-code-mips",
     info: {
       fr: "Durant ma première année de Master, nous avons du réaliser un programme permettant d'optimiser \
       du code MIPS à partir de bouts de code déjà existants. Il nous a donc fallu implanter divers algorithmes \
@@ -179,8 +179,14 @@ export const projects = [
     languages: ["Java"],
     source: "todo",
     info: {
-      fr: "En construction",
-      eng: "In progress"
+      fr: "Mise en place de l'algorithme de Welzl dans le but de résoudre un problème de\
+      cercle minimum. Deux versions de l'algorithme sont disponibles : l'une récursive et \
+      l'autre itérative. Ces deux versions ont fait l'objet de comparaisons avec un \
+      algorithme naïf. Ce projet fut réalisé lors de ma première année de Master.",
+      eng: "Implementation of Welzl's algorithm in order to solve a problem of \
+      minimum circle. Two versions of the algorithm are available : one recursive and \
+      the other iterative. These two versions have been compared with a naive one. \
+      This project was realized during my first year of MSC."
     },
     icons: [javaLogo],
     authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
@@ -193,7 +199,19 @@ export const projects = [
     },
     languages: ["Java"],
     source: "todo",
-    info: { fr: "En construction", eng: "In progress" },
+    info: {
+      fr: "Etant donnes un graphe G = (V, E) et un sous ensemble S ⊆ V \
+      de sommets, le probleme de l’arbre de Steiner couvrant S consiste a calculer un sous graphe de G qui est un arbre et qui \
+      passe par tous les points de S, tel que la longueur totale des arêtes de l’arbre est la plus petite possible. La version \
+      avec budget consiste à fixer une limite au poids total des arêtes. Il faudra alors passer par le plus de sommets possible \
+      tout en respectant cette limite. Ce projet fut réalisé lors de ma première année de Master.",
+      eng: "Given a graph G = (V, E) and a subset S ⊆ V \
+      of vertices, the problem of the Steiner tree covering S consists in computing a subgraph of G which is a tree and which \
+      passes through all the points of S, such that the total length of the edges of the tree is as small as possible. \
+      The budget version consists in setting a limit to the total weight of the edges. The goal will then be \
+      to pass through as many vertices as possible while respecting this limit. \
+      This project was realized during my first year of Master."
+    },
     icons: [javaLogo],
     authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
   },

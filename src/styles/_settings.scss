@@ -8,12 +8,6 @@ $font-1: "Nova Round", cursive;
 $font-2: "Dosis", sans-serif;
 $font-3: "Josefin Sans", serif;
 
-// $color-1: #44318d;
-// $color-2: #2a1b3d;
-// $color-3: #d83f87;
-// $color-4: #e98074;
-// $color-5: #a4b3b6;
-
 $color-1: #0B3C5D;
 $color-2: #328cc1;
 $color-3: #D9B310;
@@ -59,7 +53,6 @@ body {
   @include verticalCenter;
   height: 100%;
   color: $color-5;
-  //background-color: $color-1;
   background: $gradient-1;
 }
 

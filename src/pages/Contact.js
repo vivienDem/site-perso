@@ -21,18 +21,28 @@ export default class Contact extends React.Component {
     return (
       <div className="contactPage">
         <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
-        <ul>
-          <h1 className="contactMe">{data.contactMe[this.state.language]}</h1>
-          <li>
-            <MailButton
-              mailto="viviendemeulenaere@outlook.fr"
-              label={data.mail[this.state.language]}
-            />
-          </li>
-          <li>
-            <GitHubButton />
-          </li>
-        </ul>
+
+        <div className="content">
+          <div className="contactMe">
+            <h1>{data.contactMe[this.state.language]}</h1>
+          </div>
+
+          <div className="links">
+            <ul>
+              <li>
+                <MailButton
+                  mailto="viviendemeulenaere@free.fr"
+                  label="viviendemeulenaere@free.fr"
+                />
+              </li>
+              <li>
+                <GitHubButton />
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
 
 
       </div>
