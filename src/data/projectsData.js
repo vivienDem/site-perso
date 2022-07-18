@@ -12,7 +12,7 @@ export const projects = [
     id: 1,
     name: { fr: "Street fighter", eng: "Street fighter" },
     languages: ["Haskell"],
-    source: "todo",
+    source: "https://github.com/vivienDem/street-fighter",
     info: {
       fr: "Refonte d'un jeu de combat de type Street Fighter dans un style fonctionnel réalisé dans \
             le cadre du master STL. Il est à noté que le jeu nécessite SDL 2 qui ne semble fonctionner que sous \
@@ -32,7 +32,7 @@ export const projects = [
       eng: "Personnal website",
     },
     languages: ["Javascript", "React"],
-    source: "todo",
+    source: "https://github.com/vivienDem/site-perso",
     info: {
       fr: "Il s'agit du site web sur lequel vous vous trouvez. Il contient mon CV ainsi q'une liste \
             de mes projets.",
@@ -46,7 +46,7 @@ export const projects = [
     id: 3,
     name: { fr: "Gestionnaire de voeux", eng: "Wishes manager" },
     languages: ["Python"],
-    source: "todo",
+    source: "https://github.com/vivienDem/gestionnaire-de-voeux",
     info: {
       fr: "Ce projet a été réalisé dans le cadre du master STL. Il s'agit \
       d\'un gestionnaire de voeux permettant d'affecter des unités d'enseignement aux étudiants du master en respectant diverses contraintes \
@@ -141,7 +141,7 @@ export const projects = [
       eng: "Modelling of a smart city with BCM4Java",
     },
     languages: ["Java"],
-    source: "todo",
+    source: "https://github.com/vivienDem/smart-city",
     info: {
       fr: "L’objectif de ce projet était d’implanter un prototype simplifié de système de gestion d’événements complexe \
       pour une ville intelligente. Il a été réalisé avec l'outil BCM4Java, ayant une approche orientée composants et \
@@ -159,7 +159,7 @@ export const projects = [
     id: 9,
     name: { fr: "Casse-Briques", eng: "Brick Breaker" },
     languages: ["Java"],
-    source: "todo",
+    source: "https://github.com/vivienDem/casse-briques",
     info: {
       fr: <p>Projet de refonte du fameux jeu-vidéo <em>Casse-briques</em> réalisé dans le cadre
         de ma première année de Master à l'aide de la bibliothèque <em>JavaFX</em>. Un rapport est
@@ -177,7 +177,7 @@ export const projects = [
       eng: "Minimum circle computing with Welzl algorithm",
     },
     languages: ["Java"],
-    source: "todo",
+    source: "https://github.com/vivienDem/welzl",
     info: {
       fr: "Mise en place de l'algorithme de Welzl dans le but de résoudre un problème de\
       cercle minimum. Deux versions de l'algorithme sont disponibles : l'une récursive et \
@@ -198,7 +198,7 @@ export const projects = [
       eng: "Steiner tree problem with and without budget",
     },
     languages: ["Java"],
-    source: "todo",
+    source: "https://github.com/vivienDem/steiner",
     info: {
       fr: "Etant donnes un graphe G = (V, E) et un sous ensemble S ⊆ V \
       de sommets, le probleme de l’arbre de Steiner couvrant S consiste a calculer un sous graphe de G qui est un arbre et qui \
