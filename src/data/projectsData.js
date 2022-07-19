@@ -90,7 +90,7 @@ export const projects = [
     source: "https://github.com/vivienDem/Representation-de-polynomes",
     info: {
       fr: "Le but du problème consiste à manipuler deux modèles de structure de données : l’une sous forme \
-      linéaire et l’autre arborescente. Des expériementations sur ces structures ont ensuite été menées par \
+      linéaire et l’autre arborescente. Des expérimentations sur ces structures ont ensuite été menées par \
       Adan Bougherara et moi même. Nos conclusions sont disponibles dans le rapport accompagnant le code source.",
       eng: "The goal of the project is to manipulate two models of data structure : one in linear form and the other in tree form. \
       Experiments on these structures were then conducted by Adan Bougherara and myself. \
@@ -200,7 +200,7 @@ export const projects = [
     languages: ["Java"],
     source: "https://github.com/vivienDem/steiner",
     info: {
-      fr: "Etant donnes un graphe G = (V, E) et un sous ensemble S ⊆ V \
+      fr: "Etant donné un graphe G = (V, E) et un sous ensemble S ⊆ V \
       de sommets, le probleme de l’arbre de Steiner couvrant S consiste a calculer un sous graphe de G qui est un arbre et qui \
       passe par tous les points de S, tel que la longueur totale des arêtes de l’arbre est la plus petite possible. La version \
       avec budget consiste à fixer une limite au poids total des arêtes. Il faudra alors passer par le plus de sommets possible \
