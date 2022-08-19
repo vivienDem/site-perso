@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Cookies from "universal-cookie";
 import Project from "./pages/Projects";
+import CV from "./pages/CV";
 
 export default class App extends React.Component {
   constructor() {
@@ -17,6 +18,7 @@ export default class App extends React.Component {
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<Home cookies={this.cookies} />} />
+          <Route path="/cv" element={<CV cookies={this.cookies} />} />
           <Route path="/contact" element={<Contact cookies={this.cookies} />} />
           <Route
             path="/projects"

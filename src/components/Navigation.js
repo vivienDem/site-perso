@@ -1,9 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import LanguageButton from "./Buttons/LanguageButton";
-
-//Links titles
-const projects = { fr: "Projets", eng: "Projects" };
+import * as data from "../data/navigationData";
 
 export default class Navigation extends React.Component {
   constructor(props) {
@@ -12,6 +10,7 @@ export default class Navigation extends React.Component {
     this.state = {
       language: this.cookies.get("lang"),
       logo: this.cookies.get("langLogo"),
+      isExpanded: false,
     };
   }
 
@@ -20,12 +19,30 @@ export default class Navigation extends React.Component {
     this.setState({ language: lang });
   };
 
+  updateExpanded = () => {
+    this.setState({ isExpanded: !this.state.isExpanded });
+  };
+
   render() {
+    const classes = `${this.state.isExpanded ? " expanded" : ""}`;
     return (
-      <div className="navigation">
+      <div className={`navigation${classes}`}>
+        <button className="menu">
+          <i
+            className="fas fa-bars"
+            aria-hidden="true"
+            onClick={this.updateExpanded}
+          ></i>
+        </button>
         <ul>
           <NavLink
             to="/"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            <li> {data.home[this.state.language]} </li>
+          </NavLink>
+          <NavLink
+            to="/cv"
             className={(nav) => (nav.isActive ? "nav-active" : "")}
           >
             <li> Curriculum vitae </li>
@@ -34,7 +51,7 @@ export default class Navigation extends React.Component {
             to="/projects"
             className={(nav) => (nav.isActive ? "nav-active" : "")}
           >
-            <li>{projects[this.state.language]}</li>
+            <li>{data.projects[this.state.language]}</li>
           </NavLink>
           <NavLink
             to="/contact"
@@ -42,11 +59,13 @@ export default class Navigation extends React.Component {
           >
             <li> Contact </li>
           </NavLink>
+        </ul>
+        {!this.state.isExpanded && (
           <LanguageButton
             updateLang={this.setLanguage}
             cookies={this.props.cookies}
           ></LanguageButton>
-        </ul>
+        )}
       </div>
     );
   }

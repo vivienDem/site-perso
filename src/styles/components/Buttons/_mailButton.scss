@@ -1,21 +1,21 @@
 .mail {
-    @include verticalCenter;
+  @include verticalCenter;
 
-    .content {
-        display: inline-block;
+  .content {
+    display: inline-block;
+  }
+
+  .logo {
+    padding-left: 0.5rem;
+    display: inline-block;
+  }
+
+  .link {
+    color: $color-3;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-4;
     }
-
-    .logo {
-        padding-left: 0.5rem;
-        display: inline-block;
-    }
-
-    .link {
-        color: $color-3;
-        text-decoration: none;
-
-        &:hover {
-            color: $color-4;
-        }
-    }
+  }
 }

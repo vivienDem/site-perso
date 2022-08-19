@@ -6,27 +6,43 @@
   position: fixed;
   padding: 0;
 
-  .contactMe {
+  .contact {
     @include verticalCenter;
-
     .title {
-      font-size: 1rem;
+      text-align: center;
+      padding-left: 25%;
     }
-
   }
 
   .content {
     position: relative;
-    top: 10%;
+    top: 25%;
     background-color: $color-2;
+
+    .links {
+      flex-direction: column;
+      ul {
+        padding-left: 0;
+        padding-bottom: 1rem;
+      }
+
+      li {
+        text-align: center;
+        list-style-type: none;
+      }
+    }
   }
 
-  ul {
-    @include verticalCenter;
-    padding-left: 0;
-  }
-
-  li {
-    list-style-type: none;
+  @media screen and (min-width: $breakpointMed) {
+    .contact {
+      .title {
+        padding-left: 0;
+      }
+    }
+    .content {
+      .links {
+        flex-direction: initial;
+      }
+    }
   }
 }

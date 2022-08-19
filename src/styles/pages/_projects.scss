@@ -65,7 +65,7 @@
           left: -6px;
         }
 
-        input:checked+label {
+        input:checked + label {
           color: $color-4;
         }
 
@@ -97,7 +97,6 @@
       margin: 0.5rem 0.5rem 0.5rem 0.5rem;
       text-align: center;
       width: 33%;
-      height: 30%;
       height: 15rem;
       max-height: 50%;
       padding: 0.3rem;
@@ -224,8 +223,6 @@
         }
       }
 
-
-
       .exitButton {
         @extend .infoButton;
         grid-area: exitButton;
@@ -238,6 +235,12 @@
         grid-area: content;
         overflow-y: scroll;
       }
+    }
+  }
+
+  @media screen and (min-width: $breakpointMed) {
+    .project {
+      width: 50%;
     }
   }
 }
