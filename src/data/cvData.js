@@ -62,7 +62,7 @@ alimentaires)",
   eng: {
     date: "July 2019",
     job: "Contract worker",
-    task: "Archiving task at the office 4A (Nutritional valuation and information on foodstuffs)",
+    task: "Archiving at the office 4A (Nutritional valuation and information on foodstuffs)",
   },
 };
 

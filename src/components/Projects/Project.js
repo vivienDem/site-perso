@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { exitInfo, sourceCode, authorsText } from "../../data/projectsData";
+import { sourceCode, authorsText } from "../../data/projectsData";
 
 class Project extends Component {
   state = {
@@ -10,10 +10,16 @@ class Project extends Component {
     this.setState({ showInfo: !this.state.showInfo });
   };
 
+  handleKeyPress = (event) => {
+    if (event.key === "Escape") {
+      this.setState({ showInfo: false });
+    }
+  }
+
   render() {
     let { name, languages, source, info, icons, authors } = this.props.item;
     return (
-      <div className={"project"}>
+      <div className={"project"} tabIndex={-1} onKeyDown={this.handleKeyPress}>
         <div className="logo">
           {icons.map((icon) => (
             <img src={icon} className="languageLogo" key={icon} />
@@ -55,7 +61,10 @@ class Project extends Component {
               </div>
 
               <button className="exitButton" onClick={this.updateShowInfo}>
-                <p>{exitInfo[this.props.getLanguage()]}</p>
+                <i
+                  className="fa fa-window-close"
+                  aria-hidden="true"
+                ></i>
               </button>
             </div>
           </div>

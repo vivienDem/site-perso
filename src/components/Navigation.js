@@ -29,7 +29,7 @@ export default class Navigation extends React.Component {
       <div className={`navigation${classes}`}>
         <button className="menu">
           <i
-            className="fas fa-bars"
+            className={this.state.isExpanded ? "fa fa-window-close" : "fas fa-bars"}
             aria-hidden="true"
             onClick={this.updateExpanded}
           ></i>

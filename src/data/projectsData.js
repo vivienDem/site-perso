@@ -32,7 +32,7 @@ export const projects = [
       eng: "Personnal website",
     },
     languages: ["Javascript", "React"],
-    source: "https://github.com/vivienDem/site-perso",
+    source: "https://github.com/vivienDem/site-perso/tree/master",
     info: {
       fr: "Il s'agit du site web sur lequel vous vous trouvez. Il contient mon CV ainsi q'une liste \
             de mes projets.",
@@ -216,11 +216,6 @@ export const projects = [
     authors: ["Adan Bougherara &", "Vivien Demeulenaere"]
   },
 ];
-
-export const exitInfo = {
-  fr: "Retourner aux projets",
-  eng: "Go back to projects",
-};
 
 export const sourceCode = {
   fr: "Code source",

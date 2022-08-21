@@ -19,6 +19,10 @@
   }
 }
 
+.languageButton {
+  transition: all 0.5s;
+}
+
 .fr {
   @extend .button;
   background-image: url("../../../assets/fr.svg");

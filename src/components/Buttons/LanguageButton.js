@@ -27,7 +27,7 @@ export default class LanguageButton extends React.Component {
   render() {
     return (
       <button
-        className={this.state.language === "fr" ? "eng" : "fr"}
+        className={`languageButton ${this.state.language === "fr" ? "eng" : "fr"}`}
         onClick={() => this.changeLanguage()}
       ></button>
     );
