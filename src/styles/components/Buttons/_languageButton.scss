@@ -14,7 +14,8 @@
 
 @media screen and (min-width: $breakpointMed) {
   .button {
-    margin-top: 4rem;
+    position: relative;
+    top: 1.5rem;
     margin-left: 0.7rem;
   }
 }

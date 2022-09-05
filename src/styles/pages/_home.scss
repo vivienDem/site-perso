@@ -3,14 +3,19 @@
   .text {
     text-align: center;
     font-size: x-large;
-    padding-top: 30vh;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
-  a {
-    color: $color-2;
+    p {
+      padding: 10%;
+    }
+
+    a {
+      padding: 0.3%;
+      color: $color-3;
+    }
   }
 
   @media screen and (min-width: $breakpointMed) {

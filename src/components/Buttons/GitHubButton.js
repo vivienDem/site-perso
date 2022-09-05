@@ -9,12 +9,9 @@ class GitHubButton extends Component {
     render() {
         return (
             <div className='gitHubButton' onClick={this.open}>
-
                 <div className="content">
                     <h4>Github <i className='fab fa-github' /> </h4>
                 </div>
-
-
             </div>
         );
     }

@@ -2,11 +2,11 @@ import { NavLink } from "react-router-dom";
 
 export const text = {
   fr: (
-    <div>
+    <p>
       Bienvenue sur mon site personnel. Vous pourrez y trouver mon{" "}
       <NavLink to="/cv">CV</NavLink> et quelques liens vers mes{" "}
       <NavLink to="/projects">projets</NavLink>.
-    </div>
+    </p>
   ),
   eng: (
     <p>

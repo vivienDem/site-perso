@@ -3,7 +3,6 @@ import Navigation from "../components/Navigation";
 import MailButton from "../components/Buttons/MailButton";
 import * as data from "../data/contactData";
 import GitHubButton from "../components/Buttons/GitHubButton";
-import Background from "../components/Background";
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -21,7 +20,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div className="contactPage">
-        <Background></Background>
+        {this.props.background}
         <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
 
         <div className="content">

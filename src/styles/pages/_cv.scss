@@ -1,7 +1,7 @@
 .cvPage {
   .title {
     @include verticalCenter;
-    padding-top: 3vh;
+    padding-top: 7vh;
     text-align: center;
   }
 
@@ -13,7 +13,7 @@
   }
 
   .name {
-    color: $color-5;
+    color: $color-4;
     display: inline-block;
     position: relative;
     padding-left: 2vh;
@@ -21,14 +21,23 @@
     font-size: 1.3em;
   }
 
+  .cv {
+    padding-top: 10%;
+  }
+
   @media screen and (min-width: $breakpointMed) {
     .myPicture {
       margin-top: 0;
       margin-left: 0;
     }
+
     .name {
       font-size: 3em;
       margin-top: 4vh;
+    }
+
+    .cv {
+      padding-top: 5%;
     }
   }
 }

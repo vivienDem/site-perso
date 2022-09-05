@@ -1,14 +1,6 @@
 .mail {
   @include verticalCenter;
-
-  .content {
-    display: inline-block;
-  }
-
-  .logo {
-    padding-left: 0.5rem;
-    display: inline-block;
-  }
+  display: block;
 
   .link {
     color: $color-3;

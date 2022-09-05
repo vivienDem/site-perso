@@ -12,10 +12,7 @@ const MailButton = ({ mailto, label }) => {
         }}
       >
         <div className="content">
-          <h4>{label}</h4>
-        </div>
-        <div className="logo">
-          <i className="fa fa-envelope" aria-hidden="true"></i>
+          <h4>{label}  <i className="fa fa-envelope" aria-hidden="true"></i></h4>
         </div>
       </Link>
 

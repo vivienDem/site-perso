@@ -7,15 +7,11 @@ const Background = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
-  }, []);
   return (
     <div className="animatedBackground">
       <Particles
         id="background"
         init={particlesInit}
-        loaded={particlesLoaded}
         options={{
           fpsLimit: 60,
           interactivity: {

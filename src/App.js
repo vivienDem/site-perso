@@ -5,6 +5,9 @@ import Contact from "./pages/Contact";
 import Cookies from "universal-cookie";
 import Project from "./pages/Projects";
 import CV from "./pages/CV";
+import Background from "./components/Background";
+
+const background = <Background />
 
 export default class App extends React.Component {
   constructor() {
@@ -17,12 +20,13 @@ export default class App extends React.Component {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="*" element={<Home cookies={this.cookies} />} />
-          <Route path="/cv" element={<CV cookies={this.cookies} />} />
-          <Route path="/contact" element={<Contact cookies={this.cookies} />} />
+          <Route path="*" element={<Home cookies={this.cookies} background={background} />} />
+          <Route path="/cv" element={<CV cookies={this.cookies} background={background} />} />
+          <Route path="/contact" element={<Contact cookies={this.cookies} background={background} />} />
           <Route
             path="/projects"
-            element={<Project cookies={this.cookies} />}
+            element={<Project cookies={this.cookies}
+              background={background} />}
           />
         </Routes>
       </BrowserRouter>

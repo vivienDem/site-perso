@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import LanguageButton from "./Buttons/LanguageButton";
 import * as data from "../data/navigationData";
 
+const mobileBreakPoint = 767;
 
 export default class Navigation extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class Navigation extends React.Component {
   };
 
   checkExpanded = () => {
-    if (window.innerWidth > 767) {
+    if (window.innerWidth >= mobileBreakPoint) {
       this.setState({ isExpanded: false });
     }
   }

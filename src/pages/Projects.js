@@ -1,5 +1,4 @@
 import React from "react";
-import Background from "../components/Background";
 import Navigation from "../components/Navigation";
 import ProjectList from "../components/Projects/ProjectsList";
 
@@ -21,7 +20,7 @@ export default class Project extends React.Component {
   render() {
     return (
       <div>
-        <Background></Background>
+        {this.props.background}
         <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
         <div className="projectsPage">
           <ProjectList cookies={this.cookies} getLanguage={this.getLanguage} />

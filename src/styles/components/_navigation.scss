@@ -2,7 +2,7 @@
   .menu {
     position: absolute;
     color: $color-4;
-    background-color: $color-1;
+    background-color: transparent;
     border: none;
     display: inline-block;
     cursor: pointer;
@@ -18,8 +18,7 @@
   ul {
     transform: translateX(-100%);
     transition: transform 0.5s ease-out;
-    position: fixed;
-    background-color: $color-1;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     top: 1.5rem;
@@ -33,7 +32,6 @@
 
     li {
       font-size: xx-large;
-      padding-top: 2%;
       color: $color-3;
       cursor: pointer;
       list-style-type: none;
@@ -48,12 +46,18 @@
     top: 0;
     left: 0;
     z-index: 500;
-    background-color: $color-1;
+    background: $gradient-1;
 
     ul {
-      transform: translate(1vw);
-      position: fixed;
+      padding: 0;
+      top: 30%;
+      position: absolute;
       transform: translate(0, 0);
+      text-align: center;
+    }
+
+    li {
+      padding-top: 2%;
     }
 
     i {

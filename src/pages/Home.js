@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Navigation from "../components/Navigation";
 import * as data from "../data/homeData";
-import Background from "../components/Background";
 
 class Home extends Component {
   constructor(props) {
@@ -19,7 +18,7 @@ class Home extends Component {
   render() {
     return (
       <div className="homePage">
-        <Background></Background>
+        {this.props.background}
         <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
         <div className="text">{data.text[this.state.language]}</div>
       </div>
