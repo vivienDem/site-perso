@@ -40,13 +40,13 @@ class Project extends Component {
                 <p className="author">
                   {authors.length < 2 ? authorsText[this.props.getLanguage()]["singular"] : authorsText[this.props.getLanguage()]["plural"]} :
                 </p>
-                {authors.map((author) => (
-                  <p className="author" key={author}>{author}</p>
-                ))}
+                {authors.map((author) => {
+                  return <p className="author" key={author}>{author}</p>
+                })}
               </div>
 
               <div className="text">
-                <p>{info[this.props.getLanguage()]}</p>
+                {info[this.props.getLanguage()]}
               </div>
 
               <div className="sourceCode">

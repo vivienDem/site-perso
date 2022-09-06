@@ -4,14 +4,14 @@ $font-1: "Nova Round", cursive;
 $font-2: "Dosis", sans-serif;
 $font-3: "Josefin Sans", serif;
 
-$color-1: black;
-$color-2: rgb(110, 27, 179);
-$color-3: #d9b310;
-$color-4: #ffd000;
-$color-5: #771ace;
+$color-1: #12232e;
+$color-2: #007cc7;
+$color-3: #eefbfb;
+$color-4: #203647;
+$color-5: #4da8da;
 
-$gradient-1: linear-gradient($color-1, $color-2, $color-1);
-$gradient-2: linear-gradient(30deg, $color-1, $color-5);
+$gradient-1: linear-gradient($color-1, $color-2);
+$gradient-2: linear-gradient(110deg, $color-5, $color-1);
 
 $breakpointMega: 1200px;
 $breakpointLarge: 1024px;

@@ -1,20 +1,16 @@
 .homePage {
-
   .text {
     text-align: center;
     font-size: x-large;
     margin: 0;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-
-    p {
-      padding: 10%;
-    }
+    transform: translate(-50%, -50%);
+    left: 50%;
 
     a {
-      padding: 0.3%;
-      color: $color-3;
+      text-decoration: none;
+      color: $color-5;
     }
   }
 

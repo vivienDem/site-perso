@@ -2,7 +2,7 @@
   @include verticalCenter;
 
   .Collapsible {
-    width: 70%;
+    width: 100%;
     padding-bottom: 1%;
   }
 
@@ -49,6 +49,12 @@
         content: "\f146";
         transform: rotateZ(180deg);
       }
+    }
+  }
+
+  @media screen and (min-width: $breakpointMed) {
+    .Collapsible {
+      width: 70%;
     }
   }
 }
