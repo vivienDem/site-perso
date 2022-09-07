@@ -3,20 +3,17 @@
   height: 100%;
   top: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
   padding: 0;
 
   .contact {
     @include verticalCenter;
 
     text-align: center;
-
-    .title {
-      padding-left: 25%;
-    }
   }
 
   .content {
+    font-size: large;
     position: relative;
     top: 35%;
     background-color: $color-2;
@@ -39,14 +36,9 @@
   }
 
   @media screen and (min-width: $breakpointMed) {
-    .contact {
-      .title {
-        padding-left: 0;
-      }
-    }
-
     .content {
       top: 25%;
+      font-size: x-large;
 
       .links {
         flex-direction: initial;

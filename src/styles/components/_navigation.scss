@@ -1,6 +1,8 @@
 .navigation {
   .menu {
     position: absolute;
+    top: 0;
+    left: 0;
     color: $color-3;
     background-color: transparent;
     border: none;
@@ -31,11 +33,18 @@
     }
 
     li {
+      padding: 0.4rem;
+      position: relative;
       font-size: xx-large;
       color: $color-3;
       cursor: pointer;
       list-style-type: none;
+      transition: all 0.5s;
 
+    }
+
+    :hover {
+      transform: scale(1.15);
     }
   }
 

@@ -45,12 +45,14 @@ export default class Navigation extends React.Component {
         </button>
         <ul>
           {data.pages.map((page, index) => {
-            return <li key={index}><NavLink
-              to={page}
-              className={(nav) => nav.isActive ? "nav nav-active" : "nav"}
-              onClick={this.computeIndicatorStyle}>
-              {data.pagesName[index][this.state.language]}
-            </NavLink></li>
+            return <li key={index}
+              onClick={() => this.setState({ isExpanded: false })}>
+              <NavLink
+                to={page}
+                className={(nav) => nav.isActive ? "nav nav-active" : "nav"}
+              >
+                {data.pagesName[index][this.state.language]}
+              </NavLink></li>
           })}
         </ul>
         {!this.state.isExpanded && (
