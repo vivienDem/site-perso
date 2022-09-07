@@ -1,1 +1,1 @@
-export const contactMe = { fr: "Contactez moi", eng: "Contact" }
+export const contactMe = { fr: "Contactez-moi", eng: "Contact" }
