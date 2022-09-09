@@ -1,25 +1,25 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
 import Cookies from "universal-cookie";
-import Project from "./pages/Projects";
-import CV from "./pages/CV";
-import Background from "./components/Background";
+
+const Home = lazy(() => import('./pages/Home'));
+const Contact = lazy(() => import('./pages/Contact'));
+const CV = lazy(() => import('./pages/CV'));
+const Project = lazy(() => import('./pages/Projects'));
+const Background = lazy(() => import("./components/Background"))
+
+const withSuspense = (component) => {
+  return <Suspense fallback={<div>...</div>}>
+    {component}
+  </Suspense>
+}
+
 
 export default class App extends React.Component {
   constructor() {
     super();
     this.cookies = new Cookies();
     this.cookies.set("lang", "fr", { path: "/" });
-    this.background = <Background />
-    this.state = {
-      componentDidMount: false
-    }
-  }
-
-  componentDidMount() {
-    this.setState({ componentDidMount: true });
   }
 
   render() {
@@ -27,20 +27,21 @@ export default class App extends React.Component {
       <div>
         <BrowserRouter>
           <Routes>
-            <Route path="*" element={<Home cookies={this.cookies} />} />
-            <Route path="/cv" element={<CV cookies={this.cookies} />} />
-            <Route path="/contact" element={<Contact cookies={this.cookies} />} />
+            <Route path="*" element={withSuspense(<Home cookies={this.cookies} />)} />
+            <Route path="/cv" element={withSuspense(<CV cookies={this.cookies} />)} />
+            <Route path="/contact" element={withSuspense(<Contact cookies={this.cookies} />)} />
             <Route
               path="/projects"
-              element={<Project cookies={this.cookies}
-              />}
+              element={withSuspense(<Project cookies={this.cookies}
+              />)}
             />
           </Routes>
+
         </BrowserRouter>
-        {
-          //Loading the animated background after the first rendering to make the page load faster
-          this.state.componentDidMount && this.background
-        }
+
+        <Suspense fallback={<div className="loading-background" />} >
+          {<Background />}
+        </Suspense>
       </div>
     );
   }

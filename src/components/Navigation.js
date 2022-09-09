@@ -36,7 +36,7 @@ export default class Navigation extends React.Component {
     const classes = `${this.state.isExpanded ? " expanded" : ""}`;
     return (
       <div className={`navigation${classes}`} >
-        <button className="menu">
+        <button className="menu" aria-label="menu">
           <i
             className={this.state.isExpanded ? "fa fa-window-close" : "fas fa-bars"}
             aria-hidden="true"

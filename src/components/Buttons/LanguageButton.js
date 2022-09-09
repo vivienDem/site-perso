@@ -28,6 +28,7 @@ export default class LanguageButton extends React.Component {
     return (
       <button
         className={`languageButton ${this.state.language === "fr" ? "eng" : "fr"}`}
+        aria-label={this.state.language === "fr" ? "Language selector" : "Sélecteur de langue"}
         onClick={() => this.changeLanguage()}
       ></button>
     );
