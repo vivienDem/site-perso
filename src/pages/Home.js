@@ -18,7 +18,6 @@ class Home extends Component {
   render() {
     return (
       <div className="homePage">
-        {this.props.background}
         <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
         <div className="text">{data.text[this.state.language]}</div>
       </div>

@@ -20,7 +20,6 @@ export default class Project extends React.Component {
   render() {
     return (
       <div>
-        {this.props.background}
         <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
         <div className="projectsPage">
           <ProjectList cookies={this.cookies} getLanguage={this.getLanguage} />

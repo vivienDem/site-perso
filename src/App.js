@@ -7,29 +7,41 @@ import Project from "./pages/Projects";
 import CV from "./pages/CV";
 import Background from "./components/Background";
 
-const background = <Background />
-
 export default class App extends React.Component {
   constructor() {
     super();
     this.cookies = new Cookies();
     this.cookies.set("lang", "fr", { path: "/" });
+    this.background = <Background />
+    this.state = {
+      componentDidMount: false
+    }
+  }
+
+  componentDidMount() {
+    this.setState({ componentDidMount: true });
   }
 
   render() {
     return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="*" element={<Home cookies={this.cookies} background={background} />} />
-          <Route path="/cv" element={<CV cookies={this.cookies} background={background} />} />
-          <Route path="/contact" element={<Contact cookies={this.cookies} background={background} />} />
-          <Route
-            path="/projects"
-            element={<Project cookies={this.cookies}
-              background={background} />}
-          />
-        </Routes>
-      </BrowserRouter>
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="*" element={<Home cookies={this.cookies} />} />
+            <Route path="/cv" element={<CV cookies={this.cookies} />} />
+            <Route path="/contact" element={<Contact cookies={this.cookies} />} />
+            <Route
+              path="/projects"
+              element={<Project cookies={this.cookies}
+              />}
+            />
+          </Routes>
+        </BrowserRouter>
+        {
+          //Loading the animated background after the first rendering to make the page load faster
+          this.state.componentDidMount && this.background
+        }
+      </div>
     );
   }
 }

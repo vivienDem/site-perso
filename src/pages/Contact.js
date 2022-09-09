@@ -20,7 +20,6 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div className="contactPage">
-        {this.props.background}
         <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
 
         <div className="content">

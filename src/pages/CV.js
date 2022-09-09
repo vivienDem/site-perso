@@ -38,7 +38,6 @@ export default class CV extends React.Component {
   render() {
     return (
       <div className="cvPage">
-        {this.props.background}
         <Navigation cookies={this.cookies} updateLang={this.setLanguage} />
         <div className="title">
           <img src={myPicture} alt={data.alt} className="myPicture"></img>
