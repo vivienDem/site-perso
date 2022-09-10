@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cookies from "universal-cookie";
+import Loader from "./components/Loader";
 
 const Home = lazy(() => import('./pages/Home'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -9,7 +10,7 @@ const Project = lazy(() => import('./pages/Projects'));
 const Background = lazy(() => import("./components/Background"))
 
 const withSuspense = (component) => {
-  return <Suspense fallback={<div>...</div>}>
+  return <Suspense fallback={<Loader color="#eefbfb" />}>
     {component}
   </Suspense>
 }
@@ -26,7 +27,7 @@ export default class App extends React.Component {
     return (
       <div>
         <BrowserRouter>
-          <Routes>
+          {withSuspense(<Routes>
             <Route path="*" element={withSuspense(<Home cookies={this.cookies} />)} />
             <Route path="/cv" element={withSuspense(<CV cookies={this.cookies} />)} />
             <Route path="/contact" element={withSuspense(<Contact cookies={this.cookies} />)} />
@@ -35,8 +36,7 @@ export default class App extends React.Component {
               element={withSuspense(<Project cookies={this.cookies}
               />)}
             />
-          </Routes>
-
+          </Routes>)}
         </BrowserRouter>
 
         <Suspense fallback={<div className="loading-background" />} >
