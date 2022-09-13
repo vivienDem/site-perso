@@ -1,6 +1,6 @@
 # Getting Started with my website
 
-##Install 
+## Install 
 
 Install all the packages dependencies to run the app with the following command `npm i`.
 
