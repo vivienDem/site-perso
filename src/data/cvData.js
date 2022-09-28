@@ -20,6 +20,10 @@ export const birthContent = {
 
 //Education section
 export const educationTitle = { fr: "Formation", eng: "Education" };
+export const education_22_23 = {
+  fr: "M2 Informatique - Parcours STL",
+  eng: "MSC - Computer Science",
+};
 export const education_21_22 = {
   fr: "M1 Informatique - Parcours STL",
   eng: "MSC - Computer Science",

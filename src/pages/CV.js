@@ -54,6 +54,13 @@ export default class CV extends React.Component {
               <ul className="list">
                 <li>
                   <Education
+                    date="2022-2023"
+                    cursus={data.education_22_23[this.state.language]}
+                    school="Jussieu, Paris"
+                  />
+                </li>
+                <li>
+                  <Education
                     date="2021-2022"
                     cursus={data.education_21_22[this.state.language]}
                     school="Jussieu, Paris"
