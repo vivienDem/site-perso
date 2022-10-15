@@ -44,7 +44,7 @@ export const aLevels = {
     degree: "Baccalauréat Série S (spécialité physique)",
     honours: "Mention TB",
   },
-  eng: { degree: "A levels", honours: "With highest honour" },
+  eng: { degree: "A levels", honours: "With highest honours" },
 };
 export const bsc = {
   fr: { degree: "Licence d'informatique", honours: "Mention AB" },
@@ -65,8 +65,8 @@ alimentaires)",
   },
   eng: {
     date: "July 2019",
-    job: "Contract worker",
-    task: "Archiving at the office 4A (Nutritional valuation and information on foodstuffs)",
+    job: "Summer job",
+    task: "Archivist at the office for the evaluation and information of foodstuffs",
   },
 };
 
@@ -74,8 +74,8 @@ alimentaires)",
 export const skillsTitle = { fr: "Compétences", eng: "Skills" };
 export const languagesTitle = { fr: "Langues parlées", eng: "Languages" };
 export const english = {
-  fr: { field: "Anglais", level: "Niveau B2" },
-  eng: { field: "English", level: "Level B2" },
+  fr: { field: "Anglais", level: "Niveau C1" },
+  eng: { field: "English", level: "Level C1" },
 };
 export const french = {
   fr: { field: "Français", level: "Niveau C2" },
@@ -130,6 +130,6 @@ export const trips = {
     name: "Trips abroad :",
     content:
       " United Kingdom, Ireland, United States of America, Italy, Germany, \
-      gulf countries ...",
+      Middle-East countries ...",
   },
 };
