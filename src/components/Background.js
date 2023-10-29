@@ -13,7 +13,7 @@ const Background = () => {
         id="background"
         init={particlesInit}
         options={{
-          fpsLimit: 60,
+          fpsLimit: 120,
           interactivity: {
             events: {
               onClick: {
@@ -38,10 +38,10 @@ const Background = () => {
           },
           particles: {
             color: {
-              value: "#ff0000",
+              value: "#4dfffe",
               animation: {
                 enable: true,
-                speed: 20,
+                speed: 200,
                 sync: true,
               },
             },
@@ -50,12 +50,12 @@ const Background = () => {
               color: "random",
               consent: false,
               enable: true,
-              opacity: 0.3,
+              opacity: 0.6,
               width: 0.5,
               distance: 150,
             },
             collisions: {
-              enable: true,
+              enable: false,
             },
             move: {
               directions: "none",
@@ -66,6 +66,7 @@ const Background = () => {
               random: false,
               speed: 6,
               straight: false,
+              bounce: false
             },
             number: {
               density: {
@@ -75,10 +76,10 @@ const Background = () => {
               value: 80,
             },
             opacity: {
-              value: 0.5,
+              value: 0.8,
             },
             shape: {
-              type: "circle",
+              type: ["circle", "triangle", "edge", "polygon"],
             },
             size: {
               value: { min: 1, max: 5 },

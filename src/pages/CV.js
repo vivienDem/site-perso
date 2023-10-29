@@ -124,6 +124,24 @@ export default class CV extends React.Component {
                     task={data.dgccrf[this.state.language]["task"]}
                   />
                 </li>
+                <li>
+                  <Job
+                    duration={data.clearsyInternship[this.state.language]["date"]}
+                    job={data.clearsyInternship[this.state.language]["job"]}
+                    employer="Clearsy"
+                    location="Paris"
+                    task={data.clearsyInternship[this.state.language]["task"]}
+                  />
+                </li>
+                <li>
+                  <Job
+                    duration={data.clearsy[this.state.language]["date"]}
+                    job={data.clearsy[this.state.language]["job"]}
+                    employer="Clearsy"
+                    location="Paris"
+                    task={data.clearsy[this.state.language]["task"]}
+                  />
+                </li>
               </ul>
             }
           />
@@ -157,6 +175,17 @@ export default class CV extends React.Component {
                   title={data.programmingTitle[this.state.language]}
                   content={
                     <ul className="subList">
+                      <li>
+                        <Skills
+                          field="C++"
+                          level={
+                            data.programmingLevels[this.state.language][
+                            "advanced"
+                            ]
+                          }
+                          logo={cplusplusLogo}
+                        />
+                      </li>
                       <li>
                         <Skills
                           field="Java"
@@ -245,17 +274,7 @@ export default class CV extends React.Component {
                           logo={reactLogo}
                         />
                       </li>
-                      <li>
-                        <Skills
-                          field="C++"
-                          level={
-                            data.programmingLevels[this.state.language][
-                            "beginner"
-                            ]
-                          }
-                          logo={cplusplusLogo}
-                        />
-                      </li>
+
                       <li>
                         <Skills
                           field="Bash"

@@ -70,6 +70,60 @@ alimentaires)",
   },
 };
 
+export const clearsyInternship = {
+  fr: {
+    date: "Février - Août 2023",
+    job: "Ingénieur logiciel - Stagiaire",
+    task: <ul className="list">
+      <li>
+        Réalisation en c++ d'un composant de traduction du format ibxml vers le format nf dans le cadre de la qualification T2 de l'Atelier B.
+      </li>
+      <li>
+        Réalisation en c++ d'un composant d'inférence de types sur des composants B et des fichiers de preuve de l'Atelier B.
+      </li>
+    </ul>
+  },
+  eng: {
+    date: "February - August 2023",
+    job: "Software engineer - Stagiaire",
+    task: <ul className="list">
+      <li>
+        Creation of a c++ translation component from ibxml format to nf format as part of Atelier B's T2 qualification.
+      </li>
+      <li>
+        Creation of a type inference kit in c++ based on B components and Atelier B proof files.
+      </li>
+    </ul>
+  }
+}
+
+export const clearsy = {
+  fr: {
+    date: "Septembre 2023 - aujourd'hui",
+    job: "Ingénieur logiciel",
+    task: <ul className="list">
+      <li>
+        Développement en c++ et Qt sur un éditeur de plan de voies.
+      </li>
+      <li>
+        Tests squish sur un éditeur de plan de voies.
+      </li>
+    </ul>
+  },
+  eng: {
+    date: "September 2023 - today",
+    job: "Software engineer",
+    task: <ul className="list">
+      <li>
+        Development in c++ and Qt on a track plan editor tool.
+      </li>
+      <li>
+        Squish tests on a track plan editor tool.
+      </li>
+    </ul>
+  }
+}
+
 //Skills section
 export const skillsTitle = { fr: "Compétences", eng: "Skills" };
 export const languagesTitle = { fr: "Langues parlées", eng: "Languages" };
